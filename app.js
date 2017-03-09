@@ -1,5 +1,7 @@
 'use strict';
 
+const tools = require('./tools');
+
 const Hapi = require('hapi');
 const Blipp = require('blipp');
 const Vision = require('vision');
@@ -83,6 +85,8 @@ server.route({
 
 		console.log('Importing data...');
 		var strippedString = payload.textContent.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
+
+
 		var wordsArray = strippedString.split(" ");
 		var wordLength = wordsArray.length;
 		var wordsArrayString = JSON.stringify(wordsArray);
