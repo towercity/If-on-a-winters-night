@@ -1,6 +1,6 @@
 'use strict';
 
-const tools = require('./tools');
+const Tools = require('./tools');
 
 const Hapi = require('hapi');
 const Blipp = require('blipp');
@@ -50,7 +50,7 @@ var Text = sequelize.define('text', {
 	wordLength: {
 		type: Sequelize.INTEGER
 	},
-	wordsArray: {
+	wordsObject: {
 		type: Sequelize.STRING(1234)
 	}
 });
@@ -85,17 +85,19 @@ server.route({
 
 		console.log('Importing data...');
 		var strippedString = payload.textContent.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
-
-
 		var wordsArray = strippedString.split(" ");
+		wordsArray = Tools.stripWords(wordsArray);
+
 		var wordLength = wordsArray.length;
-		var wordsArrayString = JSON.stringify(wordsArray);
+
+		var wordsObject = Tools.wordsObject(wordsArray);
+		var wordsObjectString = JSON.stringify(wordsObject);
 
 		console.log('Saving data...');
 		Text.create({
 			textName: payload.textName,
 			textContent: payload.textContent,
-			wordsArray: wordsArrayString,
+			wordsObject: wordsObjectString,
 			wordLength: wordLength
 		});
 
