@@ -38,12 +38,12 @@ module.exports = {
 	},
 
 	//strips all but the most used words
-	topWords: function (object) {
+	topWords: function (object, cutoff) {
 		var newObject = {};
 
 		for (word in object) {
 			//Change the number here for cutoff
-			if (object[word] > 150) {
+			if (object[word] > cutoff) {
 				newObject[word] = object[word];
 			}
 		}
