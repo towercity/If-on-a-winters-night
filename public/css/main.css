@@ -3,7 +3,8 @@
 body {
 	padding-top: 50px;
 	padding-bottom: 20px;
-	background: url("/images/back.jpg") top left no-repeat;
+	background-color: grey;
+	/* background: url("/images/back.jpg") top left no-repeat; */
 }
 .content-holder {
 	background-color: white;

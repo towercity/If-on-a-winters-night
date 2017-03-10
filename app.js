@@ -78,6 +78,18 @@ server.route({
 });
 
 server.route({
+	method: 'GET',
+	path: '/{param*}',
+	handler: {
+		directory: {
+			path: './',
+			listing: false,
+			index: false
+		}
+	}
+});
+
+server.route({
 	method: 'POST',
 	path: '/form',
 	handler: function (request, reply) {
