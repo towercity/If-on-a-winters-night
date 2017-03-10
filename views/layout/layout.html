@@ -12,25 +12,6 @@
 
 <body>
 	{{{content}}}
-	<p>script</p>
-
-	<script>
-		//Function takes string and makes array (for database storage)
-		function arrayShut(string) {
-			var strippedString = string.replace(/[^\w\s]|_/g, "")
-				.replace(/\s+/g, " ");
-
-			var wordsArray = strippedString.split(" ");
-
-			wordsArray = stripWords(wordsArray);
-
-			var wordLength = wordsArray.length;
-
-			var object = toObject(wordsArray);
-			console.log(topWords(object));
-		}
-
-	</script>
 </body>
 
 </html>
