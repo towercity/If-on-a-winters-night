@@ -1,0 +1,28 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background: url("/images/back.jpg") top left no-repeat;
+}
+.content-holder {
+	background-color: white;
+	border-radius: 2px;
+	text-align: justify;
+	margin: 25px auto;
+	box-shadow: 2px 2px 5px;
+	min-height: 75vh;
+}
+.jumbotron {
+	box-shadow: 2px 2px 5px;
+}
+.navbar {
+	box-shadow: 0 0 2px;
+}
+.form-group {
+	margin: auto 5px;
+}
+.navbar-inverse .navbar-nav>li>a,
+.navbar-inverse .navbar-brand {
+	color: white;
+}
