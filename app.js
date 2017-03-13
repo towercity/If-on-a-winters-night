@@ -159,6 +159,7 @@ server.route({
 			console.log(wordsObject);
 
 			reply.view('viewtext', {
+				title: currentUser.textName,
 				wordsObject: wordsObject
 			})
 		});
