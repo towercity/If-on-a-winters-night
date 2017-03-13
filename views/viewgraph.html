@@ -1,0 +1,77 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+
+<p>
+	<h2>Words from {{title}}</h2>
+
+	<canvas id="myChart" width="400" height="400"></canvas>
+	<script>
+		//turns array of strongs back into an array of strings
+		var words = [{{#each words}} '{{this}}', {{/each}}];
+
+		var ctx = document.getElementById("myChart");
+		var myChart = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: words,
+				datasets: [{
+					label: 'Times used',
+					data: {{counts}},
+					backgroundColor: [
+						'rgb(255, 99, 132)',
+						'rgb(54, 162, 235)',
+						'rgb(255, 206, 86)',
+						'rgb(75, 192, 192)',
+						'rgb(153, 102, 255)',
+						'rgb(255, 159, 64)',
+					 'rgb(255, 99, 132)',
+						'rgb(54, 162, 235)',
+						'rgb(255, 206, 86)',
+						'rgb(75, 192, 192)',
+						'rgb(153, 102, 255)',
+						'rgb(255, 159, 64)',
+					 'rgb(255, 99, 132)',
+						'rgb(54, 162, 235)',
+						'rgb(255, 206, 86)',
+						'rgb(75, 192, 192)',
+						'rgb(153, 102, 255)',
+						'rgb(255, 159, 64)',
+					 'rgb(255, 99, 132)',
+						'rgb(54, 162, 235)',
+						'rgb(255, 206, 86)',
+						'rgb(75, 192, 192)',
+						'rgb(153, 102, 255)',
+						'rgb(255, 159, 64)',
+					 'rgb(255, 99, 132)',
+						'rgb(54, 162, 235)',
+						'rgb(255, 206, 86)',
+						'rgb(75, 192, 192)',
+						'rgb(153, 102, 255)',
+						'rgb(255, 159, 64)',
+					 'rgb(255, 99, 132)',
+						'rgb(54, 162, 235)',
+						'rgb(255, 206, 86)',
+						'rgb(75, 192, 192)',
+						'rgb(153, 102, 255)',
+						'rgb(255, 159, 64)',
+					 'rgb(255, 99, 132)',
+						'rgb(54, 162, 235)',
+						'rgb(255, 206, 86)',
+						'rgb(75, 192, 192)',
+						'rgb(153, 102, 255)',
+						'rgb(255, 159, 64)'
+					]
+				}]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						}
+					}]
+				}
+			}
+		});
+
+	</script>
+</p>

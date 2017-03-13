@@ -10,7 +10,6 @@
 	"license": "ISC",
 	"dependencies": {
 		"blipp": "^2.3.0",
-		"chart.js": "^2.5.0",
 		"form-data": "^2.1.2",
 		"handlebars": "^4.0.6",
 		"hapi": "^16.1.0",

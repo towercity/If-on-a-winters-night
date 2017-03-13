@@ -166,6 +166,46 @@ server.route({
 
 server.route({
 	method: 'GET',
+	path: '/graph/{id}',
+	handler: function (request, reply) {
+		var id = encodeURIComponent(request.params.id);
+
+		Text.findOne({
+			where: {
+				id: id
+			}
+		}).then(function (user) {
+			var currentUser = "";
+			currentUser = JSON.stringify(user);
+			currentUser = JSON.parse(currentUser);
+			var newObject = JSON.parse(currentUser.wordsObject);
+			var wordsLimit = (currentUser.wordLength / 300);
+
+			console.log(wordsLimit);
+
+			var wordsObject = Tools.topWords(newObject, wordsLimit);
+
+			//makes arrays, one for words, one amounts
+			var words = [];
+			var counts = [];
+			for (word in wordsObject) {
+				words.push(word);
+				counts.push(wordsObject[word]);
+			}
+
+			counts = JSON.stringify(counts);
+
+			reply.view('viewgraph', {
+				title: currentUser.textName,
+				words: words,
+				counts: counts
+			})
+		});
+	}
+});
+
+server.route({
+	method: 'GET',
 	path: '/delete/{id}',
 	handler: function (request, reply) {
 
