@@ -156,8 +156,6 @@ server.route({
 
 			var wordsObject = Tools.topWords(newObject, wordsLimit);
 
-			console.log(wordsObject);
-
 			reply.view('viewtext', {
 				title: currentUser.textName,
 				wordsObject: wordsObject
