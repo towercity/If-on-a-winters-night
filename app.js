@@ -62,13 +62,13 @@ var Text = sequelize.define('text', {
 		type: Sequelize.STRING
 	},
 	textContent: {
-		type: Sequelize.TEXT(long)
+		type: Sequelize.TEXT('long')
 	},
 	wordLength: {
 		type: Sequelize.INTEGER
 	},
 	wordsObject: {
-		type: Sequelize.TEXT(long)
+		type: Sequelize.TEXT('long')
 	}
 });
 
