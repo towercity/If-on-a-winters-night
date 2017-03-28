@@ -1,22 +1,26 @@
 {
-	"name": "midterm",
-	"version": "1.0.0",
-	"description": "takes in text and presents data",
-	"main": "app.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"blipp": "^2.3.0",
-		"form-data": "^2.1.2",
-		"handlebars": "^4.0.6",
-		"hapi": "^16.1.0",
-		"inert": "^4.1.0",
-		"node-fetch": "^1.6.3",
-		"sequelize": "^3.30.2",
-		"sqlite3": "^3.1.8",
-		"vision": "^4.1.1"
-	}
+  "name": "midterm",
+  "version": "1.0.0",
+  "description": "takes in text and presents data",
+  "engines": {
+    "node": "7.6.0"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "blipp": "^2.3.0",
+    "form-data": "^2.1.2",
+    "handlebars": "^4.0.6",
+    "hapi": "^16.1.0",
+    "inert": "^4.1.0",
+    "node-fetch": "^1.6.3",
+    "pg": "^6.1.5",
+    "sequelize": "^3.30.2",
+    "sqlite3": "^3.1.8",
+    "vision": "^4.1.1"
+  }
 }
