@@ -236,6 +236,18 @@ server.route({
 	}
 });
 
+server.route({
+    method: 'GET',
+    path: '/createDB',
+    handler: function (request, reply) {
+        // force: true will drop the table if it already exists
+        Text.sync({
+            force: true
+        })
+        reply("Database Created")
+    }
+});
+
 
 
 server.start((err) => {
