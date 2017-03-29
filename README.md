@@ -1,5 +1,5 @@
 # If-on-a-winters-night
-A node-based clone of the word counting program described in Italo Calvino's If on a winter's night a traveler... Takes in a text and displays data displays a graph of most commonly used words, excluding such meaning-sparse words such as 'as' or 'or'. Live preview available (here)[https://rocky-thicket-18381.herokuapp.com/]
+A node-based clone of the word counting program described in Italo Calvino's If on a winter's night a traveler... Takes in a text and displays data displays a graph of most commonly used words, excluding such meaning-sparse words such as 'as' or 'or'. Live preview available [here](https://rocky-thicket-18381.herokuapp.com/)
 
 ## Use
 This application has three main pages: the list page, the add-story page, and the graph page. These page titles are self explanatory. The list page (/displayAll) lists all stories currently contained in the database. The add-story page (also the homepage) has a form that allows you to add a new story to the database via copy/paste or, if you really feel the urge, typing the story in completely. Finally, the graph view page (/graph/{id}) displays data about the text.
